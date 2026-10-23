@@ -1,0 +1,40 @@
+<!-- Local rules for KloudSentinel -->
+<group name="local,syslog,sshd,sudo,pam,">
+
+  <!-- Rule 100001: SSH Auth Failure -->
+  <rule id="100001" level="7">
+    <if_sid>5710</if_sid>
+    <description>Custom Detection: SSH authentication failure detected on host.</description>
+  </rule>
+
+  <!-- Rule 100002: Successful SSH Login -->
+  <rule id="100002" level="5">
+    <if_sid>5715</if_sid>
+    <description>Custom Detection: Successful SSH authentication on host.</description>
+  </rule>
+
+  <!-- Rule 100003: Sudo Command Executed -->
+  <rule id="100003" level="5">
+    <if_sid>5402</if_sid>
+    <description>Custom Detection: Sudo command executed with elevated privileges.</description>
+  </rule>
+
+  <!-- Rule 100004: New User Account Created -->
+  <rule id="100004" level="8">
+    <if_sid>5902</if_sid>
+    <description>Custom Detection: New user account created on system.</description>
+  </rule>
+
+  <!-- Rule 100005: User Password Changed -->
+  <rule id="100005" level="7">
+    <if_sid>5901</if_sid>
+    <description>Custom Detection: User account password modified.</description>
+  </rule>
+
+  <!-- Rule 100006: Switch User (su) Attempt -->
+  <rule id="100006" level="6">
+    <if_sid>5301, 5302</if_sid>
+    <description>Custom Detection: Switch user (su) session initiated or attempted.</description>
+  </rule>
+
+</group>

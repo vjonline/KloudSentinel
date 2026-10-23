@@ -1,0 +1,13 @@
+{
+  "name": "kloudsentinel-engine",
+  "version": "1.0.0",
+  "description": "Stateful correlation engine and live web dashboard for KloudSentinel SIEM",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6"
+  }
+}
